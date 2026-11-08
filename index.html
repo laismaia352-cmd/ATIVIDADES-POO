@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARQUÍMETRO</title>
+</head>
+<body>
+    <h1>PARQUÍMETRO</h1>
+
+    <form>
+        <table border="1">
+            <tr>
+                <th>Tempo</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td>1 hora</td>
+                <td>R$ 2,00</td>
+            </tr>
+            <tr>
+                <td>2 horas</td>
+                <td>R$ 4,00</td>
+            </tr>
+            <tr>
+                <td>3 horas</td>
+                <td>R$ 6,00</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <div>
+            <label for="valor_deposito">Valor do Depósito (R$):</label>
+            <input type="number" id="valor_deposito" name="valor_deposito" step="0.01" placeholder="0,00" required>
+        </div>
+
+        <br>
+
+        <button type="submit">Processar Pagamento</button>
+
+        <br><br>
+
+        <div>
+            <label for="tempo_resultado">Tempo de Permanência:</label>
+            <input type="text" id="tempo_resultado" name="tempo_resultado" readonly>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="troco">Troco (R$):</label>
+            <input type="text" id="troco" name="troco" readonly>
+        </div>
+
+        <br>
+
+        <!-- Área para exibir a mensagem de valor insuficiente ou avisos -->
+        <div id="mensagem-alerta"></div>
+    </form>
+</body>
+</html>
